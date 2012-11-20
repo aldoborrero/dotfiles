@@ -1,0 +1,22 @@
+[user]
+	name = Aldo Borrero
+	email = aldo@aldoborrero.com
+[core]
+	editor = subl
+	excludesfiles = ~/.gitignore
+	excludesfile = /Users/aldo/.gitignore
+[color]
+	status = auto
+	branch = auto
+	diff = auto
+	interactive = auto
+	ui = true
+[alias]
+	st = status
+	br = branch
+	ci = commit
+	co = checkout
+[format]
+	pretty = %h - %an, %ar : %s
+[help]
+	autocorrect = 1 
