@@ -1,7 +1,0 @@
-[
-    { "keys": ["super+K", "super+b"], "command": "toggle_side_bar" },
-
-
-    { "keys": ["super+<"], "command": "fold" },
-    { "keys": ["super+shift+<"], "command": "unfold" }
-]

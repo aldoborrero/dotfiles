@@ -1,22 +1,40 @@
 [user]
 	name = Aldo Borrero
 	email = aldo@aldoborrero.com
+  
 [core]
-	editor = subl
-	excludesfiles = ~/.gitignore
-	excludesfile = /Users/aldo/.gitignore
+	editor = vim
+  pager = cat
+	excludesfile = ~/.dotfiles/git/gitignore
+  
 [color]
 	status = auto
 	branch = auto
 	diff = auto
 	interactive = auto
 	ui = true
+  
 [alias]
-	st = status
-	br = branch
-	ci = commit
+  st = status
+  
+  ci = commit
+  cm = commit -m
+  ca = commit --ammend
+  
 	co = checkout
+  cb = checkout -b
+  
+	br = branch
+  
+  merge = merge --no-ff --no-commit
+  
+  df = diff
+  gl = log --all --graph --decorate --oneline -n30
+  
+  h = help
+  
 [format]
 	pretty = %h - %an, %ar : %s
+  
 [help]
 	autocorrect = 1 
