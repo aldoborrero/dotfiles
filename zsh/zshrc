@@ -7,7 +7,7 @@
 #   - http://stackoverflow.com/questions/171563/whats-in-your-zshrc
 #
 
-ZSH=$HOME/.oh-my-zsh
+ZSH=$HOME/.dotfiles/zsh/oh-my-zsh
 DISABLE_AUTO_UPDATE="true"
 COMPLETION_WAITING_DOTS="true"
 plugins=(brew dircycle git lein osx pip rvm vi-mode)
