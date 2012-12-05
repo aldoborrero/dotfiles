@@ -10,7 +10,7 @@
 ZSH=$HOME/.dotfiles/zsh/oh-my-zsh
 DISABLE_AUTO_UPDATE="true"
 COMPLETION_WAITING_DOTS="true"
-plugins=(brew dircycle git lein osx pip rbenv gem vi-mode)
+plugins=(brew dircycle git lein osx pip rbenv gem vi-mode vagrant)
 ZSH_THEME="wild-hearted-son"
 source $ZSH/oh-my-zsh.sh
 
@@ -29,3 +29,4 @@ export RBENV_ROOT=/usr/local/opt/rbenv
 
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/Cellar/ruby/1.9.3-p327/bin:$PATH

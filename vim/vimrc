@@ -1,0 +1,107 @@
+" ==================== vimrc ====================================
+"
+" Author: Aldo Borrero <aldo@aldoborrero.com>
+"
+" Inspired by: https://github.com/skwp/dotfiles/blob/master/vimrc
+"
+" ===============================================================
+
+" ======================= Bundle Plugin =========================
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" Bundles
+Bundle 'gmarik/vundle'
+
+Bundle 'flazz/vim-colorschemes'
+
+Bundle 'Gundo'
+
+filetype plugin indent on
+
+" ====================== General Config ========================
+
+syntax on                       " Syntax highlighting on
+colorscheme molokai
+
+set encoding=utf-8              " Good to have UTF-8 :)
+set number                      " Line numbers are good
+set backspace=indent,eol,start  " Allow backspace in insert mode
+set history=1000                " Store lots of :cmdline history
+set showcmd                     " Show incomplete cmds down the bottom
+set showmode                    " Show current mode down the bottom
+set ruler                       " In which line and col we are
+set visualbell                  " No sounds
+set autoread                    " Reload files changed outside vim
+set autowrite                   " Write changes made outside vim
+set hidden                      " Buffers in background
+set laststatus=2                " Command bar at the bottom
+set splitbelow                  " Split new buffers below
+set splitright                  " Split new buffers to the right
+set matchtime=3                 " 3 seconds to show the matching paren
+set title                       " Sets title for terminal vim
+set mouse=a                     " Enables mouse (for scrolling pourposes :P)
+
+" Set leader key
+let mapleader=","
+
+" Edit long wrapped lines more naturally
+nnoremap j gj
+nnoremap k gk
+
+" Disable arrow keys (I want to learn Vim!)
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+
+" ====================== Backups & Undos =======================
+
+set undofile                    " Enable undo
+set undodir=~./vim/tmp/undo//
+set undoreload=10000            " Maximum number lines to save for undo on a buffer reload
+set undolevels=1000             " Maximum number of changes that can be undone
+
+set backup                      " Enable backups files
+set backupdir=~./vim/tmp/backup//
+
+set noswapfile                  " Don't use swap files
+
+" ====================== Indentation & Wrapping ==================
+
+set autoindent
+set smartindent
+set smarttab
+
+set shiftround                  " Use multiple of shiftwidth when indenting with < or >
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
+set expandtab                   " Spaces instead tabs
+
+set list                        " Shows hidden chars (tabs, nl)
+set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
+
+set wrap                        " Don't wrap lines
+set textwidth=80                " Maximum chars per line
+set linebreak                   " Wrap lines at convenient points
+
+" ===================== Search Settings  ========================
+
+set incsearch                   "Find the next match as we type the search
+set hlsearch                    "Hilight searches by default
+
+" ==================== Completions ==============================
+
+set wildmenu
+set wildmode=list:longest
+set wildignore+=.hg,.git,.svn
+set wildignore+=*.aux,*.out,*.toc
+set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg
+set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest
+set wildignore+=*.spl
+set wildignore+=*.sw?
+set wildignore+=*.DS_Store
