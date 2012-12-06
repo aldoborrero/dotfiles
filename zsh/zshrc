@@ -10,7 +10,7 @@
 ZSH=$HOME/.dotfiles/zsh/oh-my-zsh
 DISABLE_AUTO_UPDATE="true"
 COMPLETION_WAITING_DOTS="true"
-plugins=(brew dircycle git lein osx pip rbenv gem vi-mode vagrant)
+plugins=(brew dircycle git lein osx pip rbenv gem vi-mode vagrant knife)
 ZSH_THEME="wild-hearted-son"
 source $ZSH/oh-my-zsh.sh
 
