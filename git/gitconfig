@@ -1,40 +1,51 @@
 [user]
 	name = Aldo Borrero
 	email = aldo@aldoborrero.com
-  
+
 [core]
-	editor = vim
+	editor = subl -n -w
   pager = cat
 	excludesfile = ~/.dotfiles/git/gitignore
-  
+
 [color]
 	status = auto
 	branch = auto
 	diff = auto
 	interactive = auto
 	ui = true
-  
+
 [alias]
-  st = status
-  
+  st = status -sb
+
   ci = commit
   cm = commit -m
   ca = commit --ammend
-  
+
 	co = checkout
   cb = checkout -b
-  
+
 	br = branch
-  
+
   merge = merge --no-ff --no-commit
-  
+
   df = diff
-  gl = log --all --graph --decorate --oneline -n30
-  
+  slog = log --all --graph --decorate --oneline -n30
+
+  ignore = !git update-index --assume-unchanged
+  unignore = !git update-index --no-assume-unchanged
+  ignored =  !echo "Ignored files:" && git ls-files -v | grep "^[[:lower:]]" | awk '{print $2}'
+
   h = help
-  
+
 [format]
 	pretty = %h - %an, %ar : %s
-  
+
 [help]
-	autocorrect = 1 
+	autocorrect = 1
+
+[mergetool "sublime"]
+	cmd = subl -w $MERGED
+	trustExitCode = false
+
+[merge]
+	tool = sublime
