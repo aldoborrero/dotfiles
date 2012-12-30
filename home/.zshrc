@@ -7,14 +7,14 @@
 #   - http://stackoverflow.com/questions/171563/whats-in-your-zshrc
 #
 
-ZSH=$HOME/.dotfiles/zsh/oh-my-zsh
+ZSH=$HOME/.oh-my-zsh
 DISABLE_AUTO_UPDATE="true"
 COMPLETION_WAITING_DOTS="true"
-plugins=(brew bundler dircycle git lein osx pip rbenv gem vi-mode vagrant knife)
+plugins=(brew bundler dircycle git osx rbenv gem vi-mode vagrant knife)
 ZSH_THEME="wild-hearted-son"
 source $ZSH/oh-my-zsh.sh
 
-export EDITOR='vim'
+export EDITOR='subl'
 
 # Correct UTF8 display in DVTM & CO
 export LC_ALL=en_US.UTF-8
