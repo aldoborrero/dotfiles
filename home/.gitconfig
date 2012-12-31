@@ -1,18 +1,18 @@
 [user]
-	name = Aldo Borrero
-	email = aldo@aldoborrero.com
+  name = Aldo Borrero
+  email = aldo@aldoborrero.com
 
 [core]
-	editor = subl -n -w
+  editor = subl -n -w
   pager = cat
-	excludesfile = ~/.dotfiles/git/gitignore
+  excludesfile = ~/.gitignore
 
 [color]
-	status = auto
-	branch = auto
-	diff = auto
-	interactive = auto
-	ui = true
+  status = auto
+  branch = auto
+  diff = auto
+  interactive = auto
+  ui = true
 
 [alias]
   st = status -sb
@@ -21,10 +21,10 @@
   cm = commit -m
   ca = commit --ammend
 
-	co = checkout
+  co = checkout
   cb = checkout -b
 
-	br = branch
+  br = branch
 
   merge = merge --no-ff --no-commit
 
@@ -38,14 +38,26 @@
   h = help
 
 [format]
-	pretty = %h - %an, %ar : %s
+  pretty = %h - %an, %ar : %s
 
 [help]
-	autocorrect = 1
-
-[mergetool "sublime"]
-	cmd = subl -w $MERGED
-	trustExitCode = false
+  autocorrect = 1
 
 [merge]
-	tool = sublime
+  tool = Kaleidoscope
+
+[diff]
+  tool = Kaleidoscope
+
+[difftool "Kaleidoscope"]
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+
+[mergetool "Kaleidoscope"]
+  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+  trustExitCode = true
+
+[difftool]
+  prompt = false
+
+[mergetool]
+  prompt = false

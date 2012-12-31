@@ -29,4 +29,3 @@ export RBENV_ROOT=/usr/local/opt/rbenv
 
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/bin:$PATH
-export PATH=/usr/local/Cellar/ruby/1.9.3-p327/bin:$PATH
