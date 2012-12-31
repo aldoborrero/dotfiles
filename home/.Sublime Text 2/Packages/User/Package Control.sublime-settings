@@ -1,0 +1,19 @@
+{
+	"auto_upgrade_last_run": null,
+	"installed_packages":
+	[
+		"LESS",
+		"Liquid",
+		"LiveReload",
+		"Modelines",
+		"OmniMarkupPreviewer",
+		"Origami",
+		"Package Control",
+		"Sass",
+		"SideBarEnhancements",
+		"Theme - Phoenix",
+		"Tomorrow Color Schemes",
+		"VAlign",
+		"WordCount"
+	]
+}
