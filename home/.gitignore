@@ -2,10 +2,10 @@
 # ---------------------------
 #
 # Removes the crap, keeps the good.
-# 
+#
 # Based on the work done here:
 # https://github.com/github/gitignore
-# 
+#
 # Remember to do git config --global core.excludesfile ~/.gitignore
 #
 
@@ -55,34 +55,6 @@ pip-log.txt
 *.swo
 .*.sw[a-z]
 *.un~
-
-# -----------------------------------------
-# Android related
-# -----------------------------------------
-
-# built application files
-*.apk
-*.ap_
-
-# files for the dex VM
-*.dex
-
-# generated GUI files
-*R.java
-
-# -----------------------------------------
-# Django related
-# -----------------------------------------
-
-*.log
-*.pot
-local_settings.py
-
-# -----------------------------------------
-# Java related
-# -----------------------------------------
-
-*.class
 
 # -----------------------------------------
 # Ruby related

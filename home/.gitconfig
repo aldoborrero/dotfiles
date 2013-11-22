@@ -5,7 +5,7 @@
 [core]
   editor = subl -n -w
   pager = cat
-  excludesfile = ~/.gitignore
+  excludesfile = /Users/aldo/.gitignore_global
 
 [color]
   status = auto
@@ -15,6 +15,7 @@
   ui = true
 
 [alias]
+  stat = status -sb
   st = status -sb
 
   ci = commit
@@ -27,9 +28,28 @@
   br = branch
 
   merge = merge --no-ff --no-commit
+  discard-merge = merge --abort
+
+  ack = log --color=always --all --topo-order --pretty='format:%Cgreen%h%Creset %s%Cred%d%Creset %C(black bold)(by %an)%Creset' --full-history -S
+
+  unstage = reset HEAD
+  uns = reset HEAD
 
   df = diff
   slog = log --all --graph --decorate --oneline -n30
+
+  stash = stash save --include-untracked
+  unstash = stash pop
+
+  delete-local-branch = branch -D
+  delete-remote-branch = push origin --delete
+  delete-local-reference-to-remote-branch = branch -rd
+  delete-branch = "!sh -c 'git delete-local-branch $1; git delete-local-reference-to-remote-branch origin/$1; git delete-local-reference-to-remote-branch upstream/$1' -"
+
+  l = log -18 --color=always --all --topo-order --pretty='format:%Cgreen%h%Creset %s%Cred%d%Creset %C(black bold)(by %an)%Creset'
+  ll = log     --color=always --all --topo-order --pretty='format:%Cgreen%h%Creset %s%Cred%d%Creset %C(black bold)(by %an)%Creset'
+  gl = log -12 --color=always --all --graph --topo-order --pretty='format:%Cgreen%h%Creset %s %C(black bold)(by %an)%Creset%C(yellow bold)%d%Creset%n'
+  gll = log     --color=always --all --graph --topo-order --pretty='format:%Cgreen%h%Creset %s %C(black bold)(%cr by %an)%Creset%C(yellow bold)%d%Creset%n'
 
   ignore = !git update-index --assume-unchanged
   unignore = !git update-index --no-assume-unchanged
@@ -37,27 +57,43 @@
 
   h = help
 
+[push]
+  default = current
+
+[web]
+  browser = open
+
 [format]
   pretty = %h - %an, %ar : %s
 
 [help]
   autocorrect = 1
 
-[merge]
-  tool = Kaleidoscope
-
 [diff]
   tool = Kaleidoscope
 
+[difftool "diffmerge"]
+  cmd = diffmerge.sh \"$LOCAL\" \"$REMOTE\"
+
+[merge]
+  tool = Kaleidoscope
+
+[mergetool "diffmerge"]
+  cmd = "diffmerge.sh --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
+  trustExitCode = true
+  keepBackup = false
+[difftool "sourcetree"]
+  cmd = /usr/local/bin/ksdiff -w \"$LOCAL\" \"$REMOTE\"
+  path =
+[mergetool "sourcetree"]
+  cmd = /usr/local/bin/ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+  trustExitCode = true
 [difftool "Kaleidoscope"]
   cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-
+[difftool]
+  prompt = false
 [mergetool "Kaleidoscope"]
   cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
   trustExitCode = true
-
-[difftool]
-  prompt = false
-
 [mergetool]
   prompt = false
