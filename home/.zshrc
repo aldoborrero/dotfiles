@@ -12,6 +12,7 @@ DISABLE_AUTO_UPDATE="true"
 COMPLETION_WAITING_DOTS="true"
 plugins=(brew bundler dircycle git git-extras git-flow osx rbenv gem vi-mode vagrant knife)
 ZSH_THEME="agnoster"
+DEFAULT_USER=$USER
 source $ZSH/oh-my-zsh.sh
 
 export EDITOR='subl'
