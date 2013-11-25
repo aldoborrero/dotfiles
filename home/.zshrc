@@ -29,3 +29,5 @@ export RBENV_ROOT=/usr/local/opt/rbenv
 
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/bin:$PATH
+export PATH=/Applications/Android\ Studio.app/sdk/tools:/Applications/Android\ Studio.app/sdk/platform-tools:$PATH
