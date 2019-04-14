@@ -3,9 +3,8 @@
   email = aldo@aldoborrero.com
 
 [core]
-  editor = subl -n -w
+  editor = code --wait
   pager = cat
-  excludesfile = /Users/aldo/.gitignore_global
 
 [color]
   status = auto
@@ -66,27 +65,21 @@
 [format]
   pretty = %h - %an, %ar : %s
 
-[help]
-  autocorrect = 1
+[diff]
+  tool = vscode
 
-[push]
-  default = current
-
-[web]
-  browser = open
-
-[format]
-  pretty = %h - %an, %ar : %s
-
-[help]
-  autocorrect = 1
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
 
 [merge]
-  tool = diffmerge
-
-[mergetool "diffmerge"]
-  cmd = diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE
-  trustExitCode = true
+  tool = vscode
 
 [mergetool]
   keepBackup = false
+
+[mergetool "vscode"]
+  cmd = code --wait $MERGED
+  trustExitCode = true
+
+[help]
+  autocorrect = 1
