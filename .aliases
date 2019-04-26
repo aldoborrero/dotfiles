@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# Easier navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias -- -="cd -"
+
+# Edit common rc files
+alias zshrc="${EDITOR} ~/.zshrc"
+alias sshrc="${EDITOR} ~/.ssh/config"
+alias hosts="${EDITOR} nvim /etc/hosts"
+
+# Always enable colored `grep` output
+alias grep='grep --color=auto '
+
+# untar
+alias untar='tar xvf'
+
+# git
+alias g='git'

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# go path
+export GOPATH="${HOME}/.go"
+
+# yarn
+export YARNPATH="${HOME}/.yarn"
+
+# update path
+export PATH=$HOME/bin:/usr/local/bin:$GOPATH/bin:$YARNPATH/bin:$PATH
