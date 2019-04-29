@@ -10,7 +10,7 @@ alias -- -="cd -"
 # Edit common rc files
 alias zshrc="${EDITOR} ~/.zshrc"
 alias sshrc="${EDITOR} ~/.ssh/config"
-alias hosts="${EDITOR} nvim /etc/hosts"
+alias hosts="${EDITOR} /etc/hosts"
 
 # Always enable colored `grep` output
 alias grep='grep --color=auto '
@@ -20,3 +20,6 @@ alias untar='tar xvf'
 
 # git
 alias g='git'
+
+# ranger
+alias lf='ranger'

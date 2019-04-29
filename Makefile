@@ -1,9 +1,8 @@
 .PHONY: all
-all: bin dotfiles ## Installs the bin and etc directory files and the dotfiles.
+all: bin dotfiles
 
 .PHONY: bin
-bin: ## Installs the bin directory files.
-	# add aliases for things in bin
+bin:
 	for file in $(shell find $(CURDIR)/bin -type f -not -name "*-backlight" -not -name ".*.swp"); do \
 		f=$$(basename $$file); \
 		sudo ln -sf $$file /usr/local/bin/$$f; \
@@ -17,7 +16,7 @@ dotfiles:
 	done; \
 	git update-index --skip-worktree $(CURDIR)/.gitconfig;
 	mkdir -p $(HOME)/.config;
-  for entry in i3" "nitrogen" "nvim" "termite"; do \
+  for entry in "i3" "nitrogen" "nvim" "termite"; do \
 	  ln -snf $(CURDIR)/config/$(entry) $(HOME)/.config/$(entry); \
   done; \
 	mkdir -p $(HOME)/.local/share;
