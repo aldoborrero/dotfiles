@@ -23,3 +23,6 @@ alias g='git'
 
 # ranger
 alias lf='ranger'
+
+# misc
+alias h='history'
