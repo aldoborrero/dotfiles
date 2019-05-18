@@ -14,12 +14,11 @@ general {
   color_degraded = "#DC322F"
 }
 
-order += "spotify"
 order += "net_rate"
 order += "whatismyip"
 order += "wireless _first_"
 order += "ethernet _first_"
-# order += "load"
+order += "load"
 order += "cpu_usage"
 #order += "disk /"
 order += "diskdata"
@@ -27,6 +26,7 @@ order += "diskdata"
 order += "battery_level"
 # order += "load"
 #order += "external_script"
+order += "spotify"
 order += "tztime local"
 # order += "ipv6"
 
@@ -46,7 +46,7 @@ load {
 }
 
 diskdata {
-  disk = sda1
+  disk = sde2
   prefix_type = decimal
   #format_space = "[\?min_length=5 {value:.2f}]"
   format = " ⛁ {used_percent}% (U:{used} GB, F:{free} GB) "
@@ -58,7 +58,7 @@ external_script {
 }
 
 whatismyip {
-  format = "   {isp}\|{city}\|{countryCode} ({ip}) "
+  format = "   {isp} \| {city} \| {countryCode} ({ip}) "
   icon_on = ""
   hide_when_offline = True
   url_geo = "http://ip-api.com/json"
@@ -112,5 +112,5 @@ battery_level {
 }
 
 tztime local {
-  format = "%Y-%m-%d %H:%M:%S"
+  format = "%d / %m %H:%M:%S"
 }
