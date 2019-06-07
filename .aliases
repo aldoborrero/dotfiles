@@ -26,3 +26,5 @@ alias lf='ranger'
 
 # misc
 alias h='history'
+alias tf='terraform'
+alias tg='terragrunt'
