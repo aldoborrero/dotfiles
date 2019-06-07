@@ -31,7 +31,7 @@ order += "tztime local"
 # order += "ipv6"
 
 spotify {
-  format = "( {artist} : {title})"
+  format = " {artist} : {title}"
   format_down = ""
   format_stopped = ""
 }
