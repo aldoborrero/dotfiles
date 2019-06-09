@@ -11,6 +11,7 @@ alias -- -="cd -"
 alias zshrc="${EDITOR} ~/.zshrc"
 alias sshrc="${EDITOR} ~/.ssh/config"
 alias hosts="${EDITOR} /etc/hosts"
+alias zz="source ~/.zshrc"
 
 # Always enable colored `grep` output
 alias grep='grep --color=auto '
