@@ -1,4 +1,4 @@
-Xft.dpi:       120
+Xft.dpi:       130
 Xft.antialias: true
 Xft.hinting:   true
 Xft.rgba:      rgb
@@ -6,7 +6,7 @@ Xft.autohint:  false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-URxvt.font:                       9x15,xft:TerminessTTFNerdFontMono
+URxvt.font:                       xft:FiraCode:size=13
 URxvt*fading:                     0
 URxvt*tintColor:                  #ffffff
 URxvt*shading:                    0
@@ -19,6 +19,7 @@ URxvt*scrollBar:                  false
 URxvt*mouseWheelScrollPage:       false
 URxvt*cursorBlink:                true
 URxvt*saveLines:                  5000
+URxvt*internalBorder:             16
 
 ! Normal copy-paste keybindings without perls
 URxvt.iso14755:                   false

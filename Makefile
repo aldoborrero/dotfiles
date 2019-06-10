@@ -15,13 +15,13 @@ dotfiles:
 		ln -sfn $$file $(HOME)/$$f; \
 	done; \
 
-	git update-index --skip-worktree $(CURDIR)/.gitconfig;
+	git update-index --skip-worktree $(CURDIR)/.gitconfig; \
 
-	mkdir -p $(HOME)/.config;
-  for file in $(shell find $(CURDIR)/.config -name ".*"); do \
+	mkdir -p $(HOME)/.config; \
+  for file in $(shell find $(CURDIR)/.config -type f); do \
     f=$$(basename $$file); \
 		ln -sfn $(CURDIR)/config/$$file $(HOME)/.config/$$f; \
-  done;
+  done; \
 
-	mkdir -p $(HOME)/.local/share;
+	mkdir -p $(HOME)/.local/share; \
 	ln -snf $(CURDIR)/.fonts $(HOME)/.local/share/fonts;

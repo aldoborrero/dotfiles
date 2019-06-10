@@ -20,8 +20,8 @@ order += "wireless _first_"
 order += "ethernet _first_"
 order += "load"
 order += "cpu_usage"
-#order += "disk /"
-order += "diskdata"
+order += "disk /"
+#order += "diskdata"
 #order += "battery all"
 order += "battery_level"
 # order += "load"
@@ -46,7 +46,7 @@ load {
 }
 
 diskdata {
-  disk = sde2
+  disk = nvme0n1
   prefix_type = decimal
   #format_space = "[\?min_length=5 {value:.2f}]"
   format = " ⛁ {used_percent}% (U:{used} GB, F:{free} GB) "
@@ -112,5 +112,5 @@ battery_level {
 }
 
 tztime local {
-  format = "%d / %m %H:%M:%S"
+  format = "%d.%m. %H:%M"
 }
