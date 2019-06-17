@@ -1,9 +1,0 @@
-[general]
-base_currency = EUR
-display = price
-
-[bitcoin]
-icon = 
-
-[ethereum]
-icon = 
