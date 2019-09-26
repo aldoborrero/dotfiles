@@ -20,6 +20,6 @@ ZSH_THEME="bira"
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(git docker docker-compose vi-mode)
+plugins=(git docker docker-compose)
 
 source $ZSH/oh-my-zsh.sh
