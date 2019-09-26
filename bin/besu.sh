@@ -11,7 +11,7 @@ docker run \
   -p 8547:8547 \
   -p 30303:30303 \
   --mount type=bind,source=${VOLUME_PATH},target=/var/lib/besu \
-  hyperledger/besu:latest \
+  hyperledger/besu:${BESU_VERSION} \
   --data-path=/var/lib/besu \
   --rpc-http-enabled \
   --rpc-ws-enabled \
