@@ -14,6 +14,11 @@ source $HOME/.path
 source $HOME/.env
 source $HOME/.aliases
 
+# direnv
+if [[ -x "$(command -v direnv)" ]]; then
+  eval "$(direnv hook zsh)"
+fi
+
 # Oh-my-zsh
 export ZSH="/home/aldo/.oh-my-zsh"
 ZSH_THEME="bira"
