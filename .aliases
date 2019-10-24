@@ -30,3 +30,9 @@ alias h='history'
 alias tf='terraform'
 alias tg='terragrunt'
 alias k='kubectl'
+
+# df & du
+alias df='df -h'
+alias disksize='df -h'
+alias dirsize='du -sh * | sort -n'
+alias dirsize2='du -bsh .'
