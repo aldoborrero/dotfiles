@@ -1,7 +1,8 @@
 #!/bin/bash
 
-BESU_VERSION="1.2.5-SNAPSHOT"
-VOLUME_PATH=""
+BESU_VERSION=${BESU_VERSION:-"1.2.5-SNAPSHOT"}
+VOLUME_PATH=${VOLUME_PATH:-""}
+NETWORK=${NETWORK:-"mainnet"}
 
 [[ -z "$VOLUME_PATH" ]] && echo "VOLUME_PATH variable is unset. Not starting besu."
 
@@ -18,4 +19,5 @@ docker run \
   --graphql-http-enabled \
   --rpc-http-host="0.0.0.0" \
   --rpc-ws-host="0.0.0.0" \
-  --graphql-http-host="0.0.0.0"
+  --graphql-http-host="0.0.0.0" \
+  --network="${NETWORK}"
