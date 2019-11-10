@@ -19,6 +19,11 @@ if [[ -x "$(command -v direnv)" ]]; then
   eval "$(direnv hook zsh)"
 fi
 
+# helm
+if [[ -x "$(command -v helm)" ]]; then
+source <(helm completion zsh)
+fi
+
 # Oh-my-zsh
 export ZSH="/home/aldo/.oh-my-zsh"
 ZSH_THEME="bira"
