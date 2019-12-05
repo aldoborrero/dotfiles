@@ -21,7 +21,12 @@ fi
 
 # helm
 if [[ -x "$(command -v helm)" ]]; then
-source <(helm completion zsh)
+  source <(helm completion zsh)
+fi
+
+# kubectl
+if [[ -x "$(command -v kubectl)" ]]; then
+  source <(kubectl completion zsh)
 fi
 
 # Oh-my-zsh
