@@ -7,4 +7,4 @@ export GOPATH="${HOME}/.go"
 export YARNPATH="${HOME}/.yarn"
 
 # update path
-export PATH=$HOME/bin:/usr/local/bin:$GOPATH/bin:$YARNPATH/bin:$PATH
+export PATH=$HOME/bin:$HOME/.dotfiles/bin:/usr/local/bin:$GOPATH/bin:$YARNPATH/bin:$PATH
