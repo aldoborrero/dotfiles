@@ -1,3 +1,5 @@
 #!/bin/bash
 
-wine ./netinstall64.exe
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+wine "${SCRIPT_DIR}"/netinstall64.exe
