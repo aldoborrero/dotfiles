@@ -306,7 +306,7 @@ else
 endif
 
 " ----------------------------------------- "
-" File Type settings 			    		"
+" File Type settings 			    		          "
 " ----------------------------------------- "
 
 au BufNewFile,BufRead *.vim setlocal noet ts=4 sw=4 sts=4
