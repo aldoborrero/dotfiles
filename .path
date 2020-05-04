@@ -6,5 +6,8 @@ export GOPATH="${HOME}/.go"
 # yarn
 export YARNPATH="${HOME}/.yarn"
 
+# support krew (https://github.com/kubernetes-sigs/krew)
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
 # update path
 export PATH=$HOME/bin:$HOME/.dotfiles/bin:/usr/local/bin:$GOPATH/bin:$YARNPATH/bin:$PATH
